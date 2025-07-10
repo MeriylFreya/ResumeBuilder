@@ -61,15 +61,19 @@ export const landingPageStyles = {
 
   // SVG styles
   svgContainer: "w-full h-auto max-w-md mx-auto",
-  svgRect: "fill-[url(#cardGradient)] stroke-[#cfd8dc] stroke-[2]",
-  svgCircle: "fill-[url(#bgGradient)]",
-  svgRectPrimary: "fill-[#ffca28]",
-  svgRectSecondary: "fill-[#d81b60]",
-  svgRectLight: "fill-[#cfd8dc]",
-  svgRectSkill: "fill-[#f5f5f5]",
-  svgAnimatedCircle: "fill-[#00bcd4] opacity-80",
-  svgAnimatedRect: "fill-[#ffca28] opacity-80",
-  svgAnimatedPolygon: "fill-[#d81b60] opacity-80",
+  svgRect: "fill-[url(#cardGradientAlt)] stroke-[#a1a1aa] stroke-[3]",
+  svgEllipse: "fill-[url(#bgGradientAlt)]",
+  svgRectPrimaryAlt: "fill-[#4ade80]",
+  svgRectSecondaryAlt: "fill-[#22d3ee]",
+  svgRectLightAlt: "fill-[#a1a1aa]",
+  svgRectSkillAlt: "fill-[#d8b4fe]",
+  svgAnimatedCircleAlt: "fill-[#f472b6] opacity-90",
+  svgAnimatedRectAlt: "fill-[#4ade80] opacity-90",
+  svgAnimatedPolygonAlt: "fill-[#22d3ee] opacity-90",
+  
+  // New gradients for alt styles
+  cardGradientAlt: "url(#cardGradientAlt)",
+  bgGradientAlt: "url(#bgGradientAlt)",
 
   // Features section
   featuresSection: "bg-gradient-to-br from-[#1a237e]/20 to-[#6a1b9a]/20 py-16 sm:py-24",
@@ -198,19 +202,19 @@ export const cardStyles = {
 export const authStyles = {
   container: "w-[90vw] md:w-[400px] p-8 bg-gradient-to-br from-[#1a237e]/95 to-[#6a1b9a]/95 rounded-3xl border border-[#ffca28]/20 shadow-2xl backdrop-blur-xl",
   headerWrapper: "text-center mb-8",
-  title: "text-2xl font-black text-gray-900 mb-2",
-  subtitle: "text-white-700 font-medium",
+  title: "text-2xl font-black text-white mb-2",
+  subtitle: "text-white font-medium",
   form: "space-y-6",
   errorMessage: "text-red-600 text-sm font-medium bg-[#d81b60]/10 border border-[#ffca28]/20 px-4 py-3 rounded-xl backdrop-blur-sm",
   submitButton: "w-full py-4 bg-gradient-to-r from-[#ffca28] to-[#d81b60] text-white font-black rounded-2xl hover:scale-105 hover:shadow-xl hover:shadow-[#ffca28]/20 transition-all text-lg",
-  switchText: "text-center text-sm text-white-700 font-medium",
-  switchButton: "font-black text-gray-800 hover:text-black transition-colors",
+  switchText: "text-center text-sm text-white font-medium",
+  switchButton: "font-black text-white hover:text-white transition-colors",
   signupContainer: "w-[90vw] md:w-[400px] p-8 bg-gradient-to-br from-[#1a237e]/95 to-[#6a1b9a]/95 rounded-3xl border border-[#d81b60]/20 shadow-2xl backdrop-blur-xl overflow-hidden",
-  signupTitle: "text-2xl font-black text-gray-900 mb-2",
-  signupSubtitle: "text-white-700 font-medium",
+  signupTitle: "text-2xl font-black text-white mb-2",
+  signupSubtitle: "text-white font-medium",
   signupForm: "space-y-4",
   signupSubmit: "w-full py-4 bg-gradient-to-r from-[#d81b60] to-[#ffca28] text-white font-black rounded-2xl hover:scale-105 hover:shadow-xl hover:shadow-[#d81b60]/20 transition-all text-lg",
-  signupSwitchButton: "font-black text-gray-800 hover:text-black transition-colors"
+  signupSwitchButton: "font-black text-white hover:text-white transition-colors"
 };
 
 

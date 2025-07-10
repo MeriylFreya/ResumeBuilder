@@ -129,8 +129,8 @@ const LandingPage = () => {
 
                             <div className={landingPageStyles.statsContainer}>
                                 {[
-                                    { value: '50K+', label: 'Resumes Created', gradient: 'from-violet-600 to-fuchsia-600' },
-                                    { value: '4.9★', label: 'User Rating', gradient: 'from-orange-500 to-red-500' },
+                                    { value: '20K+', label: 'Resumes Created', gradient: 'from-violet-600 to-fuchsia-600' },
+                                    { value: '4.5★', label: 'User Rating', gradient: 'from-orange-500 to-red-500' },
                                     { value: '5 Min', label: 'Build Time', gradient: 'from-emerald-500 to-teal-500' }
                                 ].map((stat, idx) =>(
                                     <div className={landingPageStyles.statItem} key={idx}>
@@ -169,47 +169,105 @@ const LandingPage = () => {
                                     </defs>
 
                                     {/* SVG elements */}
-                                    <rect x="50" y="50" width="300" height="400" rx="20" className={landingPageStyles.svgRect} />
-                                    <circle cx="120" cy="120" r="25" className={landingPageStyles.svgCircle} />
-                                    <rect x="160" y="105" width="120" height="8" rx="4" className={landingPageStyles.svgRectPrimary} />
-                                    <rect x="160" y="120" width="80" height="6" rx="3" className={landingPageStyles.svgRectSecondary} />
-                                    <rect x="70" y="170" width="260" height="4" rx="2" className={landingPageStyles.svgRectLight} />
-                                    <rect x="70" y="185" width="200" height="4" rx="2" className={landingPageStyles.svgRectLight} />
-                                    <rect x="70" y="200" width="240" height="4" rx="2" className={landingPageStyles.svgRectLight} />
-                                    <rect x="70" y="230" width="60" height="6" rx="3" className={landingPageStyles.svgRectPrimary} />
-                                    <rect x="70" y="250" width="40" height="15" rx="7" className={landingPageStyles.svgRectSkill} />
-                                    <rect x="120" y="250" width="50" height="15" rx="7" className={landingPageStyles.svgRectSkill} />
-                                    <rect x="180" y="250" width="45" height="15" rx="7" className={landingPageStyles.svgRectSkill} />
-                                    <rect x="70" y="290" width="80" height="6" rx="3" className={landingPageStyles.svgRectSecondary} />
-                                    <rect x="70" y="310" width="180" height="4" rx="2" className={landingPageStyles.svgRectLight} />
-                                    <rect x="70" y="325" width="150" height="4" rx="2" className={landingPageStyles.svgRectLight} />
-                                    <rect x="70" y="340" width="200" height="4" rx="2" className={landingPageStyles.svgRectLight} />
+                                    <rect x="40" y="20" width="360" height="480" rx="30" fill="#f5f5f5" stroke="#a1a1aa" strokeWidth="3" />
+                                    {/* Circle representing picture inside resume */}
+                                    <circle cx="110" cy="110" r="30" fill="red" />
+                                    <rect x="170" y="110" width="100" height="10" rx="5" className={landingPageStyles.svgRectPrimaryAlt} />
+                                    <rect x="170" y="130" width="90" height="8" rx="4" className={landingPageStyles.svgRectSecondaryAlt} />
+                                    <rect x="80" y="160" width="240" height="5" rx="3" className={landingPageStyles.svgRectLightAlt} />
+                                    <rect x="80" y="175" width="180" height="5" rx="3" className={landingPageStyles.svgRectLightAlt} />
+                                    <rect x="80" y="190" width="220" height="5" rx="3" className={landingPageStyles.svgRectLightAlt} />
+                                    <rect x="80" y="205" width="200" height="5" rx="3" className={landingPageStyles.svgRectLightAlt} />
+                                    <rect x="80" y="220" width="70" height="8" rx="4" className={landingPageStyles.svgRectPrimaryAlt} />
+                                    <rect x="80" y="240" width="50" height="18" rx="9" className={landingPageStyles.svgRectSkillAlt} />
+                                    <rect x="130" y="240" width="60" height="18" rx="9" className={landingPageStyles.svgRectSkillAlt} />
+                                    <rect x="190" y="240" width="55" height="18" rx="9" className={landingPageStyles.svgRectSkillAlt} />
+                                    <rect x="80" y="280" width="90" height="8" rx="4" className={landingPageStyles.svgRectSecondaryAlt} />
+                                    <rect x="80" y="300" width="190" height="5" rx="3" className={landingPageStyles.svgRectLightAlt} />
+                                    <rect x="80" y="315" width="160" height="5" rx="3" className={landingPageStyles.svgRectLightAlt} />
+                                    <rect x="80" y="330" width="210" height="5" rx="3" className={landingPageStyles.svgRectLightAlt} />
+                                    <rect x="80" y="345" width="200" height="5" rx="3" className={landingPageStyles.svgRectLightAlt} />
+                                    <rect x="80" y="360" width="190" height="5" rx="3" className={landingPageStyles.svgRectLightAlt} />
+                                    <rect x="80" y="375" width="180" height="5" rx="3" className={landingPageStyles.svgRectLightAlt} />
+                                    <rect x="80" y="390" width="170" height="5" rx="3" className={landingPageStyles.svgRectLightAlt} />
+                                    <rect x="80" y="405" width="160" height="5" rx="3" className={landingPageStyles.svgRectLightAlt} />
+                                    
+                                    
 
                                     {/* Animated elements */}
-                                    <circle cx="320" cy="100" r="15" className={landingPageStyles.svgAnimatedCircle}>
+                                    {/* Move animated circle outside the big rectangle */}
+                                    {/* Remove this circle from inside */}
+                                    <rect x="40" y="310" width="14" height="14" rx="7" className={landingPageStyles.svgAnimatedRectAlt}>
+                                        <animateTransform
+                                            attributeName="transform"
+                                            type="scale"
+                                            values="1; 1.2; 1"
+                                            dur="3s"
+                                            repeatCount="indefinite"
+                                        />
+                                    </rect>
+                                    <polygon points="350,210 365,230 335,230" className={landingPageStyles.svgAnimatedPolygonAlt}>
+                                        <animateTransform
+                                            attributeName="transform"
+                                            type="rotate"
+                                            values="0 350 220; 360 350 220; 0 350 220"
+                                            dur="5s"
+                                            repeatCount="indefinite"
+                                        />
+                                    </polygon>
+                                    {/* New animated elements outside the big rectangle */}
+                                    <circle cx="20" cy="50" r="12" className={landingPageStyles.svgAnimatedCircleAlt}>
                                         <animateTransform
                                             attributeName="transform"
                                             type="translate"
-                                            values="0,0; 0,-10; 0,0"
+                                            values="0,0; 0,15; 0,0"
                                             dur="3s"
                                             repeatCount="indefinite"
                                         />
                                     </circle>
-                                    <rect x="30" y="300" width="12" height="12" rx="6" className={landingPageStyles.svgAnimatedRect}>
+                                    <rect x="380" y="450" width="16" height="16" rx="8" className={landingPageStyles.svgAnimatedRectAlt}>
                                         <animateTransform
                                             attributeName="transform"
                                             type="translate"
-                                            values="0,0; 5,0; 0,0"
-                                            dur="2s"
+                                            values="0,0; -10,0; 0,0"
+                                            dur="4s"
                                             repeatCount="indefinite"
                                         />
                                     </rect>
-                                    <polygon points="360,200 370,220 350,220" className={landingPageStyles.svgAnimatedPolygon}>
+                                    <polygon points="10,400 25,420 0,420" className={landingPageStyles.svgAnimatedPolygonAlt}>
                                         <animateTransform
                                             attributeName="transform"
                                             type="rotate"
-                                            values="0 360 210; 360 360 210; 0 360 210"
+                                            values="0 10 410; 360 10 410; 0 10 410"
+                                            dur="6s"
+                                            repeatCount="indefinite"
+                                        />
+                                    </polygon>
+                                    {/* Additional animated elements */}
+                                    <circle cx="360" cy="50" r="10" className={landingPageStyles.svgAnimatedCircleAlt}>
+                                        <animateTransform
+                                            attributeName="transform"
+                                            type="translate"
+                                            values="0,0; 0,20; 0,0"
                                             dur="4s"
+                                            repeatCount="indefinite"
+                                        />
+                                    </circle>
+                                    <rect x="10" y="460" width="20" height="20" rx="10" className={landingPageStyles.svgAnimatedRectAlt}>
+                                        <animateTransform
+                                            attributeName="transform"
+                                            type="translate"
+                                            values="0,0; 15,0; 0,0"
+                                            dur="5s"
+                                            repeatCount="indefinite"
+                                        />
+                                    </rect>
+                                    <polygon points="380,400 395,420 365,420" className={landingPageStyles.svgAnimatedPolygonAlt}>
+                                        <animateTransform
+                                            attributeName="transform"
+                                            type="rotate"
+                                            values="0 380 410; 360 380 410; 0 380 410"
+                                            dur="7s"
                                             repeatCount="indefinite"
                                         />
                                     </polygon>
